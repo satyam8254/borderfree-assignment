@@ -1,14 +1,13 @@
-//import logo from './logo.svg';
-//import './App.css';
-//import { Switch } from "react-router";
 import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
 import Home from "./components/home";
+import Signup from "./components/signup";
 function App() {
   return (
     //<div className="App"></div>
     <Router>
       <Routes>
         <Route excat path="/" element={<Home />}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
       </Routes>
     </Router>
   );

@@ -9,37 +9,43 @@ import carousel3 from "../images/carousel2.jpg";
 function carousel(){
     return(
         <div className="main-container">
-<Carousel>
+            <Carousel>
 
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={carorsel1}
-      alt="First slide"
-    />
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carorsel1}
+                  alt="First slide"
+                  height={400}
+                  width="100%"
+                />
 
-  </Carousel.Item>
+              </Carousel.Item>
 
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={carousel2}
-      alt="Second slide"
-    />
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carousel2}
+                  alt="Second slide"
+                  height={400}
+                  width="100%"
+                />
 
 
-  </Carousel.Item>
+              </Carousel.Item>
 
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={carousel3}
-      alt="Third slide"
-    />
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carousel3}
+                  alt="Third slide"
+                  height={400}
+                  width="100%"
+                />
 
- 
-  </Carousel.Item>
-</Carousel>
+            
+              </Carousel.Item>
+            </Carousel>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./body.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card,Button} from "react-bootstrap";
 import reebok from "../images/reebok.jpg";
 import adidas from "../images/adidas.jpg";
