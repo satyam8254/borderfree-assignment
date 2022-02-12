@@ -22,14 +22,14 @@ function header(){
         navbarScroll
       >
         
-        <Nav.Link href="#action1">Men</Nav.Link>
+        <Nav.Link href="#action1">MEN</Nav.Link>
         <Nav.Link href="#action1">WOMEN</Nav.Link>
         <Nav.Link href="#action1">KIDS</Nav.Link>
         <Nav.Link href="#action1">HOME & LIVING</Nav.Link>
         <Nav.Link href="#action1">BEAUTY</Nav.Link>
         <Nav.Link href="#action1">STUDIO</Nav.Link>
       </Nav>
-      <img src={searchIcon} height={35} width={35}></img>
+      <img src={searchIcon} height={35} width={35} alt=""></img>
       <Form className="search-container">
 
         

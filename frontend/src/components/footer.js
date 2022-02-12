@@ -3,6 +3,9 @@ import "./footer.css"
 import Facebook from '../images/facebook.svg';
 import Instagram from '../images/instagram.svg';
 import Linkedin from '../images/linkedin.svg';
+import google from "../images/googleplay.png";
+import apple from "../images/applestore.png";
+
 
 function footer(){
     return(
@@ -23,6 +26,9 @@ function footer(){
       </div>
       <div>
           <h6>APP ON MOBILE</h6>
+          <img src={google} height="50px" width="150px" alt=""></img>
+          <br></br>
+          <img src={apple} height="50px" width="150px" alt=""></img>
       </div>
       <div>
           <h6>CAREER</h6>

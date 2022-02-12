@@ -1,0 +1,10 @@
+.main-container{
+    display: flex;
+    margin: 2%;
+    margin-left: 3.5%;
+    align-items: center;
+}
+
+.card-container{
+    margin: 1%;
+}
