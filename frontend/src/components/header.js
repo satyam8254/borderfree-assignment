@@ -42,7 +42,7 @@ function header(){
         />
         
         <Nav>
-            <Nav.Link href="#action1">
+            <Nav.Link href="/register">
                 <div className="user-profile">
                 <img src={profile} height={20} width={20} alt=""></img>
                 <p>Profile</p>

@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import {useNavigate} from "react-router-dom";
 import "./registration.css";
 function Registration(){
 
@@ -14,6 +15,9 @@ function Registration(){
         setUser({...user,[name]:value});
     }
 
+    const navigate = useNavigate();
+    navigate('/signup')
+    
     return(
         <div>
         <div>
@@ -26,7 +30,7 @@ function Registration(){
         </div>
         <div className="bottom-container">
           <p>Already Have Account</p>
-          <button onClick="">Sign In</button>
+          <button onClick={navigate}>Sign In</button>
         </div>
       </div>
 

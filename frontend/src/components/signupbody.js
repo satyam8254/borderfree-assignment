@@ -1,10 +1,11 @@
 import React from "react";
 import "./signupbody.css"
-function body(){
+import {useNavigate} from "react-router-dom";
+function Body(){
+  const navigate = useNavigate();
+  navigate('/register')
     return(
         <div>
-
-            
     <div className="home-middle">
       <div className='middle-left'>
         <div className='big-logo'>
@@ -14,7 +15,7 @@ function body(){
         <p>Doorstep delivery & Fast Service</p>
         <div className='register-div'>
             <h4>Don't have an account?</h4>
-            <button onClick="">Register</button>
+            <button onClick={navigate}>Register</button>
         </div>
       </div>
 
@@ -47,4 +48,4 @@ function body(){
     )
 }
 
-export default body;
+export default Body;

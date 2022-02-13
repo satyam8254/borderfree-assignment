@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route excat path="/" element={<Home />}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
-        <Route path="/registration" element={<Registration/>}></Route>
+        <Route path="/register" element={<Registration/>}></Route>
       </Routes>
     </Router>
   );
