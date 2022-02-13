@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const express = require("express");
-const userRouter = require("./root/users");
+const userRouter = require("./root/auth")
 const bodyparser = require("body-parser");
+const env = require("dotenv");
+env.config()
+mongoose.connect(process.env.db)
+const PORT = process.env.PORT
 const app = express();
-db="mongodb://localhost:27017/borderfree"
-mongoose.connect(db)
 app.use(bodyparser());
-
-app.use("/signup",userRouter);
-
-app.listen(5000,console.log("server is listening at port:- 5000"))
+app.use(require("./root/auth"));
+app.listen(5000,console.log(`server is listening at port:- ${PORT}`))
