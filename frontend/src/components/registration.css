@@ -1,0 +1,132 @@
+/* left side */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.upper-container{
+    float: left;
+    /* margin-top: 5vh; */
+    padding-top: 25vh;
+    /* padding-bottom: vh; */
+    padding-left: 5vw;
+    padding-right: 8vw;
+    background-color:white;
+    height: 100vh;
+}
+.Heading-container h2{
+    /* text-align: left; */
+    font: normal normal 600 60px/80px Avenir;
+    /* letter-spacing: 1px; */
+    color:crimson;
+    text-transform: capitalize;
+
+}
+
+.bottom-container{
+    padding-top: 15vh;
+}
+.bottom-container p{
+    font: normal normal normal 16px/26px Avenir;
+    letter-spacing: 0.2px;
+    color: #565657;
+}
+.bottom-container button{
+    font: normal normal bold 15px/20px Open Sans;
+    letter-spacing: 0.3px;
+    color:crimson;
+    width: 8vw;
+    height: 5vh;
+    background-color: white;
+    border-color:crimson ;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* right side */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.register-container{
+    background: #fdf8f8 0% 0% no-repeat padding-box;
+    height: 100vh;
+    width: 660px;
+    padding: 5rem;
+    float: right;
+}
+.register-box{
+    margin-top: 2rem;
+    /* display: flex; */
+    justify-content: space-around;
+    /* background-color: burlywood; */
+}
+.left-register, .right-register{
+    display: flex;
+    flex-direction: column;
+    /* background-color: cadetblue; */
+    width: 50%;
+}
+.left-register input, .right-register input{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #989898;
+    margin-bottom: 2.5rem;
+    height: 2rem;
+    outline: none;
+    padding-bottom: .5rem;
+    padding-left: .25rem;
+    background: hsl(0, 100%, 99%) 0% 0% no-repeat padding-box;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    
+}
+.register-container h1{
+    text-align: left;
+    font: normal normal medium 32px/60px Avenir;
+    letter-spacing: 1.28px;
+    color:crimson;
+    text-transform: uppercase;
+}
+
+.term-condition{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.term-condition input{
+    margin-top: 4px;
+    cursor: pointer;
+}
+.term-condition h4{
+    margin-left: 10px;
+    font: normal normal normal 14px/20px Open Sans;
+    letter-spacing: 0.49px;
+    color:crimson;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-container button{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 3rem;
+    background: crimson 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: #fff;
+}
