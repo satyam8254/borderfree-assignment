@@ -3,8 +3,12 @@
     margin: 2%;
     margin-left: 3.5%;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .card-container{
     margin: 1%;
+    /* height: 400px;
+    margin-bottom: 2%; */
 }
+

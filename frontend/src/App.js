@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
 import Home from "./components/home";
 import Signup from "./components/signup";
 import Registration from "./components/registrationhome";
+import Productdetail from "./components/productdetail";
 function App() {
   return (
     //<div className="App"></div>
@@ -10,6 +11,7 @@ function App() {
         <Route excat path="/" element={<Home />}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/register" element={<Registration/>}></Route>
+        <Route path="/product/:id" element={<Productdetail/>}></Route>
       </Routes>
     </Router>
   );

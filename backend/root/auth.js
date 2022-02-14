@@ -3,6 +3,8 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../model/user");
+const Product = require("../model/product");
+const productdata = require("../productdata/product");
 
 
 router.post("/register",async(req,res)=>{
@@ -79,6 +81,30 @@ router.post("/signin",async(req,res)=>{
         console.log(err)
     }
 
+})
+
+
+router.get("/product",async(req,res)=>{
+    const data = await Product.find();
+    res.json(data)
+    console.log(data)
+})
+
+
+router.get("/push",async(req,res)=>{
+    const data = await Product.insertMany(productdata);
+    res.json(data)
+})
+
+
+router.get("/product/:id",async(req,res)=>{
+    const pid = req.params.id;
+    const product = await Product.findById(pid);
+
+    var updatedItem = product.itemclicked;
+    updatedItem+=1
+    const update = await Product.findByIdAndUpdate(pid,{itemclicked:updatedItem})
+    res.json(product)
 })
 
 module.exports = router

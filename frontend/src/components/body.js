@@ -1,71 +1,47 @@
-import React from "react";
+import React ,{useState,useEffect}from "react";
 import "./body.css";
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card,Button} from "react-bootstrap";
-import reebok from "../images/reebok.jpg";
-import adidas from "../images/adidas.jpg";
-import nike from "../images/nike.jpg";
-import puma from "../images/puma.jpg";
-function body(){
+import {Link} from "react-router-dom";
+import {Card,Row,Col} from "react-bootstrap";
+function Body(){
+    const [product,setProduct] = useState([]);
+    const fetchData = ()=>{
+        fetch('http://localhost:5000/product')
+            .then((response)=>{
+                return response.json();
+            })
+            .then((data)=>{
+                console.log(data);
+                setProduct(data)
+        })
+    }
+    useEffect(()=>{
+        fetchData();
+    },[])
+    console.log(product);
     return (
         <div className="main-container">
-            <div className="card-container">
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={reebok} />
+            <Row>
+            {product.map(data =>(
+                <Col key={data._id} sm={12} md={6} lg={4} xl={3}>
+                <Card style={{ width: '18rem' ,height:'500px' }} className='my-3 p-3 rounded'>
+                <Link to= {`/product/${data._id}`}>
+                <Card.Img variant="top" src={data.image} height={200}/>
                 <Card.Body>
-                    <Card.Title>Reebok</Card.Title>
+                    <Card.Title>{data.title}</Card.Title>
                     <Card.Text>
-                    Men running shoes
+                    {data.description}
                     </Card.Text>
-                    <h6>Rs. 1899</h6>
-                    <Button variant="primary">Wishlist</Button>
+                    <h6>${data.price}</h6>
+                    {/* <Button variant="primary">Wishlist</Button> */}
                 </Card.Body>
+                </Link>
                 </Card>
-            </div>
-
-            <div className="card-container">
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={adidas} />
-                <Card.Body>
-                    <Card.Title>Adidas</Card.Title>
-                    <Card.Text>
-                    Men running shoes
-                    </Card.Text>
-                    <h6>Rs. 2799</h6>
-                    <Button variant="primary">Wishlist</Button>
-                </Card.Body>
-                </Card>
-            </div>
-
-            <div className="card-container">
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={nike} />
-                <Card.Body>
-                    <Card.Title>Nike</Card.Title>
-                    <Card.Text>
-                    Men running shoes
-                    </Card.Text>
-                    <h6>Rs. 2999</h6>
-                    <Button variant="primary">Wishlist</Button>
-                </Card.Body>
-                </Card>
-            </div>
-
-            <div className="card-container">
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={puma} />
-                <Card.Body>
-                    <Card.Title>Puma</Card.Title>
-                    <Card.Text>
-                    Men running shoes
-                    </Card.Text>
-                    <h6>Rs. 2299</h6>
-                    <Button variant="primary">Wishlist</Button>
-                </Card.Body>
-                </Card>
-            </div>
+            </Col>
+            ))}
+            </Row>
+           
         </div>
     )
 }
 
-export default body;
+export default Body;
