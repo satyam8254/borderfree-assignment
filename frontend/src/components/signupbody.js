@@ -1,9 +1,7 @@
 import React from "react";
 import "./signupbody.css"
-import {useNavigate} from "react-router-dom";
+import {Link,} from "react-router-dom";
 function Body(){
-  const navigate = useNavigate();
-  navigate('/register')
     return(
         <div>
     <div className="home-middle">
@@ -15,7 +13,8 @@ function Body(){
         <p>Doorstep delivery & Fast Service</p>
         <div className='register-div'>
             <h4>Don't have an account?</h4>
-            <button onClick={navigate}>Register</button>
+            <Link to='/register'><button onClick="">Register</button></Link>
+            
         </div>
       </div>
 

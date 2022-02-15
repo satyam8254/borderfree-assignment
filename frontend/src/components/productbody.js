@@ -21,16 +21,16 @@ function Productbody(){
 
     return(
         <div className="main-container">
-        <Row className='my-4 p-4 rounded'>
+        <Row className='my-4 p-5 rounded'>
             <Col>
-            <Card style={{ width: '18rem' ,height:'500px' }} className='my-3 p-3 rounded'>
+            <Card style={{ width: '30em' ,height:'500px' }} className='my-3 p-3 rounded'>
             <Card.Img variant="top" src={pdata.image} height={200}/>
             <Card.Body>
                 <Card.Title>{pdata.title}</Card.Title>
                 <Card.Text>
-                {pdata.description}
+                <h6>description</h6>{pdata.description}
                 </Card.Text>
-                <h6>${pdata.price}</h6>
+                <h6>Price:- ${pdata.price}</h6>
                 <Button variant="primary">Add to cart</Button>
             </Card.Body>
             </Card>
