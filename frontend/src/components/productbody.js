@@ -21,7 +21,7 @@ function Productbody(){
 
     return(
         <div className="main-container">
-        <Row>
+        <Row className='my-4 p-4 rounded'>
             <Col>
             <Card style={{ width: '18rem' ,height:'500px' }} className='my-3 p-3 rounded'>
             <Card.Img variant="top" src={pdata.image} height={200}/>

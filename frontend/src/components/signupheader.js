@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import {Navbar, Nav, Form, FormControl,Container  } from "react-bootstrap"
 import logo from "../images/logo.png";
 import searchIcon from "../images/search-icon.png";
@@ -7,12 +8,14 @@ import bag from "../images/bag.png";
 import "./signupheader.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function header(){
+function Header(){
+  const navigate = useNavigate();
+  navigate('/')
     return(
         <div className="header-container">
 <Navbar bg="white" expand="lg" fixed="top" >
   <Container fluid>
-    <Navbar.Brand href="#"><img src={logo} height={50} width={70} alt=""></img></Navbar.Brand>
+    <Navbar.Brand href={navigate}><img src={logo} height={50} width={70} alt=""></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -63,4 +66,4 @@ function header(){
         </div>
     )
 }
-export default header;
+export default Header;

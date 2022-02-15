@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import {Navbar, Nav, Form, FormControl,Container  } from "react-bootstrap"
 import logo from "../images/logo.png";
 import searchIcon from "../images/search-icon.png";
@@ -8,12 +9,14 @@ import bag from "../images/bag.png";
 import "./header.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function header(){
+function Header(){
+  const navigate = useNavigate();
+    navigate('/')
     return(
         <div className="header-container">
 <Navbar bg="white" expand="lg" fixed="top" >
   <Container fluid>
-    <Navbar.Brand href="#"><img src={logo} height={50} width={70} alt=""></img></Navbar.Brand>
+    <Navbar.Brand href={navigate}><img src={logo} height={50} width={70} alt=""></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -70,7 +73,7 @@ function header(){
         </div>
     )
 }
-export default header;
+export default Header;
 
 
 
@@ -92,54 +95,3 @@ export default header;
 
 
 
-
-
-
-
-
-
-{/* <div className="header-container">
-            //logo
-            <div>
-                <img src={logo} width={70} height={50} alt=""></img>
-            </div>
-
-            //menu
-            <div className="header-navs">
-                <ul>
-                    <li>MEN</li>
-                    <li>WOMEN</li>
-                    <li>KIDS</li>
-                    <li>HOME & LIVING</li>
-                    <li>BEAUTY</li>
-                    <li>STUDIO</li>
-                </ul>
-            </div>
-
-            //search
-            <div className="search-container">
-                <img src={searchIcon} height={20} width={20} alt=""></img>
-                <input type="search" placeholder="search for products, brands and more"></input>
-            </div>
-
-            //user profile
-            <div className="user-profile">
-                //profile
-                <div>
-                    <img src={profile} height={20} width={20} alt=""></img>
-                    <p>Profile</p>
-                </div>
-
-                //wishlist
-                <div>
-                    <img src={wishlist} height={20} width={20} alt=""></img>
-                    <p>Wishlist</p>
-                </div>
-
-                //cart
-                <div>
-                    <img src={bag} height={20} width={20} alt=""></img>
-                    <p>Bag</p>
-                </div>
-            </div>
-        </div> */}
